@@ -1,43 +1,47 @@
 document.getElementById("Mark").addEventListener("click", funkTion);
 
 // Make a quiz
-
 function funkTion() {
 
-// Var for math
+// counter for how many questions answered correctly.
+let k = 0;
 
-let i = 0;
-i++
-
-// If functions
-
-function qNo1() { 
-    if (a1 == "Reepicheep"){
-        i + 1
-    }else {
-       i = i
-    }
-}
 
 // Use if statements to make a passthrough for inputted text, should be relatively trivial compared to some of the assignments you've gotten.
-
+// question 1
 let question1 = document.getElementById("narniaQues").value.toLowerCase();
-let question2 = document.getElementById("thanosSnap").value.toLowerCase();
-let question3 = document.getElementById("hotFuzz").value.toLowerCase();
-let question4 = document.getElementById("lotrQues").value.toLowerCase();
-a1 = question1
-a2 = question2
-a3 = question3
-a4 = question4
-document.getElementById("Answer4").innerHTML
+    if (question1 == "reepicheep") {
+        document.getElementById("Answer1").innerHTML = "Correct"
+        k++
+    }   else{
+            document.getElementById("Answer1").innerHTML = "Incorrect"
+    }
 
-// Proc
+// question 2
+    let question2 = document.getElementById("thanosSnap").value.toLowerCase();
+    if (question2 == "hawkeye") {
+        document.getElementById("Answer2").innerHTML = "Correct"
+        k++
+    }   else{
+            document.getElementById("Answer2").innerHTML = "Incorrect"
+    }
 
+// question 3
+    let question3 = document.getElementById("hotFuzz").value.toLowerCase();
+    if (question3 == "a cult") {
+        document.getElementById("Answer3").innerHTML = "Correct"
+        k++
+    }   else{
+            document.getElementById("Answer3").innerHTML = "Incorrect"
+    }
 
-
-
-// Disp res
-
-document.getElementById("Results").innerHTML + i
-
-}
+// question 4
+    let question4 = document.getElementById("lotrQues").value.toLowerCase();
+    if (question4 == "the prancing pony") {
+        document.getElementById("Answer4").innerHTML = "Correct"
+        k++
+    }   else{
+            document.getElementById("Answer4").innerHTML = "Incorrect"
+        }
+    document.getElementById('Results').innerHTML = "" + k + "/4"
+} 
