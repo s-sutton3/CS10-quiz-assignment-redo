@@ -43,5 +43,21 @@ let question1 = document.getElementById("narniaQues").value.toLowerCase();
     }   else{
             document.getElementById("Answer4").innerHTML = "Incorrect"
         }
+
+// results & perecentage
     document.getElementById('Results').innerHTML = "" + k + "/4"
+    document.getElementById('Percentage').innerHTML = "" + k / 4 * 100 + "%"
+
+// feedback
+    if (document.getElementById('Percentage').innerHTML == "100%"){
+        document.getElementById('Feedback').innerHTML = "" + "Excellent job!"
+        }else if (document.getElementById('Percentage').innerHTML == "75%"){
+        document.getElementById('Feedback').innerHTML = "" + "Great job!"
+            }else if (document.getElementById('Percentage').innerHTML == "50%"){
+            document.getElementById('Feedback').innerHTML = "" + "Good job!"
+                 }else if (document.getElementById('Percentage').innerHTML == "25%"){
+                 document.getElementById('Feedback').innerHTML = "" + "Nice try, you can do it next time!"
+                    }else{
+                    document.getElementById('Feedback').innerHTML = "" + "You've got a lot of room for improvement."
+        }
 } 
